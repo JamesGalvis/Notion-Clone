@@ -1,19 +1,19 @@
-import { Button } from '@/components/ui/button'
+import { Button } from '@/components/ui/button';
 
-import Heading from './_components/heading'
-import Heroes from './_components/heroes'
-import Footer from './_components/footer'
+import Heading from './_components/heading';
+import Heroes from './_components/heroes';
+import Footer from './_components/footer';
 
 function MarketingPage() {
   return (
-    <div className='min-h-screen flex flex-col'>
-      <div className="flex flex-col items-center justify-center md:justify-start text-center gap-y-8 flex-1 px-6 pb-10">
+    <div className="min-h-screen flex flex-col">
+      <div className="flex flex-col items-center justify-center md:justify-start text-center gap-y-8 flex-1 sm:px-6 px-4 pb-10">
         <Heading />
         <Heroes />
       </div>
       <Footer />
     </div>
-  )
+  );
 }
 
-export default MarketingPage
+export default MarketingPage;
