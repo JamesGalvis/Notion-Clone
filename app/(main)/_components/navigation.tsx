@@ -17,13 +17,14 @@ import {
 import { api } from '@/convex/_generated/api';
 import { useQuery, useMutation } from 'convex/react';
 
-import UserItem from './use-item';
+import UserItem from './user-item';
 import Item from './item';
+import DocumentList from './document-list';
 
 function Navigation() {
   const pathname = usePathname();
   const isMobile = useMediaQuery('(max-width: 768px)');
-  const documents = useQuery(api.documents.getAll);
+  // const documents = useQuery(api.documents.getAll);
   const create = useMutation(api.documents.create);
 
   const isResizingRef = useRef(false);
@@ -137,7 +138,7 @@ function Navigation() {
         <div
           onClick={collapse}
           className={cn(
-            'h-6 w-6 text-muted-foreground rounded-md hover:bg-neutral-300 dark:hover:bg-neutral-600 absolute top-3 right-2 opacity-0 group-hover/sidebar:opacity-100 transition cursor-pointer',
+            'h-6 w-6 text-muted-foreground rounded-md hover:bg-neutral-300 dark:hover:bg-neutral-600 absolute top-4 right-2 opacity-0 group-hover/sidebar:opacity-100 transition cursor-pointer',
             isMobile && 'opacity-100'
           )}
         >
@@ -152,9 +153,7 @@ function Navigation() {
         </div>
 
         <div className="mt-4">
-          {documents?.map((document) => (
-            <div key={document._id}>{document.title}</div>
-          ))}
+          <DocumentList />
         </div>
 
         <div

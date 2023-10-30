@@ -20,7 +20,7 @@ function UserItem() {
       <DropdownMenuTrigger asChild>
         <div
           role="button"
-          className="flex items-center text-sm p-3 w-full hover:bg-primary/5"
+          className="flex items-center text-sm px-3 py-4 w-full hover:bg-primary/5"
         >
           <div className="flex items-center gap-x-2 max-w-[150px]">
             <Avatar className="h-6 w-6">
@@ -34,7 +34,7 @@ function UserItem() {
         </div>
       </DropdownMenuTrigger>
       <DropdownMenuContent
-        className="w-72"
+        className="w-72 bg-neutral-900/80 backdrop-blur"
         align="start"
         alignOffset={11}
         forceMount
